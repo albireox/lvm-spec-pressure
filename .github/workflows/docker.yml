@@ -21,13 +21,13 @@ jobs:
         run: |
           if [[ $GITHUB_REF == refs/heads/main ]]
           then
-            echo ::set-output name=TAGS::$USER/$APP:latest
+            echo name=TAGS::$USER/$APP:latest >> $GITHUB_OUTPUT
           elif [[ $GITHUB_REF == refs/heads/* ]]
           then
             BRANCH=$(echo ${GITHUB_REF#refs/heads/} | sed -r 's/[\/]/_/g')
-            echo ::set-output name=TAGS::$USER/$APP:$BRANCH
+            echo name=TAGS::$USER/$APP:$BRANCH >> $GITHUB_OUTPUT
           else
-            echo ::set-output name=TAGS::$USER/$APP:${GITHUB_REF#refs/tags/}
+            echo name=TAGS::$USER/$APP:${GITHUB_REF#refs/tags/} >> $GITHUB_OUTPUT
           fi
       - name: Show tags
         run: echo ${{ steps.set-tags.outputs.TAGS }}
