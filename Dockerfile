@@ -6,7 +6,7 @@ WORKDIR /opt
 
 COPY . lvm_spec_pressure
 
-RUN apt-get -y install essential-build
+RUN apt-get -y install build-ssentials
 
 RUN pip3 install -U pip setuptools wheel
 RUN cd lvm_spec_pressure && pip3 install .
