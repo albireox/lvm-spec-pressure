@@ -1,4 +1,4 @@
-FROM 3.11.2-alpine
+FROM python:3.11.2-alpine
 
 LABEL maintainer="gallegoj@uw.edu"
 
