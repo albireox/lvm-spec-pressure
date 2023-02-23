@@ -6,7 +6,7 @@ WORKDIR /opt
 
 COPY . lvm_spec_pressure
 
-RUN apk add libc6-compat
+RUN apk add alpine-sdk
 
 RUN pip3 install -U pip setuptools wheel
 RUN cd lvm_spec_pressure && pip3 install .
