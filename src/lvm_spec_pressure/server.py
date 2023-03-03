@@ -69,7 +69,10 @@ class SerialConnection:
 
         if delimiter is not None and delimiter != "":
             try:
-                return await reader.readuntil(html.escape(delimiter).encode())
+                return await asyncio.wait_for(
+                    reader.readuntil(html.escape(delimiter).encode()),
+                    timeout,
+                )
             except asyncio.IncompleteReadError:
                 log.error(f"{self.name}: IncompleteReadError while reading serial.")
                 return b""
