@@ -3,15 +3,15 @@ specs:
     b1:
       device:
         url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT58H915-if00-port0
-      delimiter: \\
+      delimiter: \
       port: 1112
     r1:
       device:
         url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT58GXGJ-if00-port0
-      delimiter: \\
+      delimiter: \
       port: 1113
     z1:
       device:
         url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT4X5X0I-if00-port0
-      delimiter: \\
+      delimiter: \
       port: 1114
