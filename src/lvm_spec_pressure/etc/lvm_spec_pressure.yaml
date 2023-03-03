@@ -2,16 +2,16 @@ specs:
   sp1:
     b1:
       device:
-        url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT4X5W4H-if00-port0
+        url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT58H915-if00-port0
       delimiter: \\
       port: 1112
     r1:
       device:
-        url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT2XWSBS-if00-port0
+        url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT58GXGJ-if00-port0
       delimiter: \\
       port: 1113
     z1:
       device:
-        url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT58H9EK-if00-port0
+        url: /dev/serial/by-id/usb-FTDI_USB-RS232_Cable_FT4X5X0I-if00-port0
       delimiter: \\
       port: 1114
