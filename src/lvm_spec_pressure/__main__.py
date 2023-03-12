@@ -41,7 +41,10 @@ async def lvm_spec_pressure(spec: str, config: str | None = None, debug: bool = 
     cameras = list(config_data["specs"][spec].keys())
 
     servers = await asyncio.gather(
-        *[SpecPressureServer(spec, camera).start() for camera in cameras]
+        *[
+            SpecPressureServer(spec, camera, config=config_data).start()
+            for camera in cameras
+        ]
     )
 
     await servers[0].server.serve_forever()

@@ -163,12 +163,14 @@ class SpecPressureServer:
         timeout: float = 0.1,
         delimiter: str | None = None,
         debug: bool = False,
+        config: dict | None = None,
     ):
         self.spec = spec
         self.camera = camera
 
         cwd = pathlib.Path(__file__).parent
-        config = read_yaml_file(cwd / "etc/lvm_spec_pressure.yaml")
+        if config is None:
+            config = read_yaml_file(cwd / "etc/lvm_spec_pressure.yaml")
 
         if (
             self.spec not in config["specs"]
